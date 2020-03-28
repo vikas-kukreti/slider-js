@@ -1,0 +1,107 @@
+/* License : MIT, @author: Vikas Kukreti, @github: https://github.com/vikas-kukreti */
+* {
+	margin:0;
+	padding:0;
+	outline: none;
+}
+
+
+/* Slider Design */
+
+.slider {
+	position: relative;
+	overflow: hidden;
+}
+.slider div {
+	display: block;
+	max-height: 100vh;
+	overflow: hidden;
+	background: #000000;
+	position: absolute;
+	left: -100%;
+	width: 100%;
+	opacity: 0;
+	transition: 1s left ease, 1s opacity ease;
+}
+.slider div.close {
+	opacity: 0;
+	left: 100%;
+}
+.slider div.show {
+	z-index: 10;
+	opacity: 1;
+	left: 0;
+}
+.slider > img {
+	display: block;
+	width: 100%;
+	max-height: 90vh;
+}
+.slider div > img {
+	display: block;
+	width: 100%;
+}
+.slider span {
+	z-index: 11;
+	display: block;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.slider span i {
+	float: left;
+	content: " ";
+	display: block;
+	width: 1.5rem;
+	height: 0.25rem;
+	border-radius: 0.25rem;
+	box-shadow: 0 0.125rem 0.125rem rgba(40, 40, 40, 0.4);
+	background: rgba(255, 255, 255, 0.322);
+	margin: 0.125rem;
+	transition: 0.7s all;
+}
+.slider span i.active {
+	background: rgba(255, 255, 255, 0.726);
+}
+.slider button {
+	z-index: 11;
+	position: absolute;
+	top: calc(50% - 1.4rem);
+	height: 1.4rem;
+	width: 1.4rem;
+	padding: 1.5rem;
+	border: none;
+	border-radius: 50%;
+	background: rgba(17, 17, 17, 0.333);
+	transition: 0.4s all;
+	opacity: 0.6;
+}
+.slider button svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1rem;
+	height: 1rem;
+	fill: rgba(255, 255, 255, 0.8);
+	transition: 0.3s all;
+}
+.slider button.prev {
+	left: 3%;
+	transform: rotate(180deg);
+}
+.slider button.next {
+	right: 3%;
+}
+.slider button:hover {
+	background: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+
+/* Responsive Slider Styles */
+@media (max-width: 600px) {
+	.slider button {
+		padding: 1rem;
+	}
+}
