@@ -7,18 +7,18 @@
 ## how to use ?
 - copy this style reference inside your html head element.
   
-    ```
+    ```html
     <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-script-v1.js">
     ``` 
 
 - copy this script just before the end of html body element.
   
-    ```
+    ```html
     <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-style-v1.css">
     ``` 
 - thats how to use it in html documents
 
-    ```
+    ```html
     <div class="slider" id="slider">
         
         <!-- Every slider-item element is considered a slide -->
