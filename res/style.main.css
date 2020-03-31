@@ -12,7 +12,7 @@
 	position: relative;
 	overflow: hidden;
 }
-.slider div {
+.slider .slider-item {
 	display: block;
 	max-height: 100vh;
 	overflow: hidden;
@@ -23,25 +23,25 @@
 	opacity: 0;
 	transition: 1s left ease, 1s opacity ease;
 }
-.slider div.close {
+.slider .slider-item.close {
 	opacity: 0;
 	left: 100%;
 }
-.slider div.show {
+.slider .slider-item.show {
 	z-index: 10;
 	opacity: 1;
 	left: 0;
 }
-.slider > img {
+.slider .background {
 	display: block;
 	width: 100%;
 	max-height: 90vh;
 }
-.slider div > img {
+.slider .slider-item > img {
 	display: block;
 	width: 100%;
 }
-.slider span {
+.slider .switch {
 	z-index: 11;
 	display: block;
 	position: absolute;
@@ -49,7 +49,7 @@
 	left: 50%;
 	transform: translate(-50%, 0);
 }
-.slider span i {
+.slider .switch i {
 	float: left;
 	content: " ";
 	display: block;
@@ -61,10 +61,11 @@
 	margin: 0.125rem;
 	transition: 0.7s all;
 }
-.slider span i.active {
+.slider .switch i.active {
 	background: rgba(255, 255, 255, 0.726);
 }
-.slider button {
+.slider .prev,
+.slider .next {
 	z-index: 11;
 	position: absolute;
 	top: calc(50% - 1.4rem);
@@ -75,9 +76,10 @@
 	border-radius: 50%;
 	background: rgba(17, 17, 17, 0.333);
 	transition: 0.4s all;
-	opacity: 0.6;
+	opacity: 0.7;
 }
-.slider button svg {
+.slider .prev svg,
+.slider .next svg {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -87,21 +89,27 @@
 	fill: rgba(255, 255, 255, 0.8);
 	transition: 0.3s all;
 }
-.slider button.prev {
+.slider .prev {
 	left: 3%;
 	transform: rotate(180deg);
 }
-.slider button.next {
+.slider .next {
 	right: 3%;
 }
-.slider button:hover {
+.slider .prev:hover,
+.slider .next:hover {
 	background: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
+}
+.slider .prev:hover svg,
+.slider .next:hover svg {
+	fill: rgba(255, 255, 255, 1);
 }
 
 /* Responsive Slider Styles */
 @media (max-width: 600px) {
-	.slider button {
+	.slider .prev,
+	.slider .next {
 		padding: 1rem;
 	}
 }

@@ -2,14 +2,14 @@
 const slider = document.querySelector('#slider');
 
 if(slider) {
-	let sliderSlides = slider.querySelectorAll('div');
-	let sliderSwitcher = slider.querySelector('span');
+	let sliderSlides = slider.querySelectorAll('.slider-item');
+	let sliderSwitcher = slider.querySelector('.switch');
     const sliderCount = sliderSlides.length;
     let imageSlideShow;
 	let i = 0;
 	while(sliderSwitcher.querySelectorAll('i').length != sliderCount) {
 		let i = document.createElement('i');
-		sliderSwitcher.appendChild(i);
+        sliderSwitcher.appendChild(i);
 	}
 	sliderSwitcher = sliderSwitcher.querySelectorAll('i');
     const forwardSliderImage = i => {
