@@ -8,13 +8,13 @@
 - copy this style reference inside your html head element.
   
     ```html
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-script-v1.js">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-style-v1.css">
     ``` 
 
 - copy this script just before the end of html body element.
   
     ```html
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-style-v1.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/vikas-kukreti/slider-js/master/dist/sliderjs-script-v1.js">
     ``` 
 - thats how to use it in html documents
 
